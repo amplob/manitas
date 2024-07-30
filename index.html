@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Planas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1 id="name">John Doe</h1>
-        <p id="location">Based in Barcelona</p>
-        <p id="vehicle">With own vehicle</p>
-        <p id="skills-title">Skills:</p>
-        <ul id="skills">
-            <li>Capable of installing air conditioners</li>
-            <li>Capable of installing osmosis water filters</li>
-            <li>Capable of electrical installations</li>
-        </ul>
-        <button id="toggle-language">Cambiar a Español</button>
+  <header>
+    <div class="language-buttons">
+      <button id="english" onclick="translate('en')">🇬🇧</button>
+      <button id="spanish" onclick="translate('es')">🇪🇸</button>
     </div>
-    <script src="scripts.js"></script>
+    <h1 id="name">Marc Planas</h1>
+  </header>
+
+  <main>
+    <section id="about">
+      <img src="me.png" alt="Marc Planas" id="profile-picture">
+      <p id="description">Handyman based in Barcelona, with more than 10 years of experience.</p>
+    </section>
+
+    <section id="skills">
+      <h2 id="skills-title">Skills</h2>
+      <ul id="skills-list">
+        <li>Electrical installations</li>
+        <li>Water filters installations</li>
+        <li>Air conditioner installations</li>
+        <li>Water radiator installation and removal</li>
+        <li>Sink and drains installation and removal</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p id="contact-text">Don't hesitate to contact:</p>
+      <form action="mailto:marcisyourhandyman@gmail.com" method="post" enctype="text/plain">
+        <textarea id="contact-input">Hello,
+My name is ... 
+And I want to ask ... 
+Thank you</textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
