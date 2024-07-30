@@ -1,37 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+function translate(lang) {
+  const texts = {
+    en: {
+      name: "Marc Planas",
+      description: "Handyman based in Barcelona, with more than 10 years of experience.",
+      skillsTitle: "Skills",
+      skills: [
+        "Electrical installations",
+        "Water filters installations",
+        "Air conditioner installations",
+        "Water radiator installation and removal",
+        "Sink and drains installation and removal"
+      ],
+      contactTitle: "Contact",
+      contactText: "Don't hesitate to contact:",
+      contactPlaceholder: "Hello,\nMy name is ... \nAnd I want to ask ... \nThank you"
+    },
+    es: {
+      name: "Marc Planas",
+      description: "Manitas en Barcelona, con más de 10 años de experiencia.",
+      skillsTitle: "Habilidades",
+      skills: [
+        "Instalaciones eléctricas",
+        "Instalaciones de filtros de agua",
+        "Instalaciones de aire acondicionado",
+        "Instalación y remoción de radiadores de agua",
+        "Instalación y remoción de fregaderos y desagües"
+      ],
+      contactTitle: "Contacto",
+      contactText: "No dude en contactar:",
+      contactPlaceholder: "Hola,\nMi nombre es ... \nY quiero preguntar ... \nGracias"
+    }
+  };
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+  document.getElementById('name').textContent = texts[lang].name;
+  document.getElementById('description').textContent = texts[lang].description;
+  document.getElementById('skills-title').textContent = texts[lang].skillsTitle;
 
-h1 {
-    margin-bottom: 10px;
-}
+  const skillsList = document.getElementById('skills-list');
+  skillsList.innerHTML = '';
+  texts[lang].skills.forEach(skill => {
+    const li = document.createElement('li');
+    li.textContent = skill;
+    skillsList.appendChild(li);
+  });
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
+  document.getElementById('contact-title').textContent = texts[lang].contactTitle;
+  document.getElementById('contact-text').textContent = texts[lang].contactText;
+  document.getElementById('contact-input').value = texts[lang].contactPlaceholder;
 }
