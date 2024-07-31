@@ -1,89 +1,75 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 20px;
     background-color: #f0f0f0;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
-.language-buttons button {
-    background: none;
-    border: none;
-    cursor: pointer;
+.language-switcher {
+    display: flex;
+}
+
+.lang-btn {
     margin-left: 10px;
-}
-
-.language-buttons img {
-    width: 30px;
-    height: auto;
-}
-
-h1 {
-    margin: 0;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .about {
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-#profile-pic {
-    max-width: 150px;
+.about img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    margin-right: 20px;
 }
 
-.skills {
-    padding: 20px;
-    background-color: white;
-    margin: 10px 0;
+.skills .skill {
+    margin-bottom: 10px;
 }
 
-.skills h2 {
-    margin-top: 0;
-}
-
-.skill {
-    margin: 10px 0;
+.skill h3 {
     cursor: pointer;
-}
-
-.skill p {
-    margin: 5px 0;
-    font-weight: bold;
-    display: inline-block;
+    margin: 0;
     padding: 5px;
-    border: 1px solid transparent;
+    background-color: #ddd;
+    border: 1px solid #ccc;
 }
 
 .skill-images {
     display: none;
+    margin-top: 5px;
 }
 
 .skill-images img {
     width: 100px;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .contact {
-    padding: 20px;
+    margin-top: 20px;
 }
 
-#contact-btn {
+.contact-btn {
+    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-#contact-btn img {
-    width: 30px;
-    height: auto;
+.hidden {
+    display: none;
 }
