@@ -1,87 +1,75 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background-color: #f0f0f0;
 }
 
 header {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
+.language-switcher {
+    display: flex;
 }
 
-.language-buttons button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.language-buttons img {
-    width: 30px;
-    height: auto;
-}
-
-.profile {
-    text-align: center;
-    margin: 20px;
-}
-
-.profile-img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
-.skills {
-    padding: 20px;
-}
-
-.skills h2 {
-    text-align: center;
-}
-
-.skill {
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.skill-title {
-    margin: 0;
-    cursor: pointer;
-    color: #007BFF;
-}
-
-.skill-images {
-    display: none;
-    margin-top: 10px;
-}
-
-.skill-images img {
-    width: 100px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.contact {
-    text-align: center;
-    margin: 20px;
-}
-
-#contact-button {
+.lang-btn {
+    margin-left: 10px;
     font-size: 24px;
     border: none;
     background: none;
     cursor: pointer;
-    color: #007BFF;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.skills .skill {
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.skill-images {
+    display: none;
+    margin-top: 5px;
+}
+
+.skill-images img {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
