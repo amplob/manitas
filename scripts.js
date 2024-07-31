@@ -1,66 +1,68 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #333;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const skills = document.querySelectorAll('.skill');
+    skills.forEach(skill => {
+        skill.addEventListener('click', () => {
+            const imagesDiv = skill.querySelector('.skill-images');
+            imagesDiv.style.display = imagesDiv.style.display === 'block' ? 'none' : 'block';
+        });
+    });
 
-header {
-  background: #f4f4f4;
-  padding: 10px;
-  text-align: center;
-}
+    document.getElementById('contact-btn').addEventListener('click', () => {
+        window.location.href = 'mailto:marcisyourhandyman@gmail.com';
+    });
 
-.language-buttons {
-  float: right;
-}
+    const spanishText = {
+        description: 'Handyman con sede en Barcelona, con más de 10 años de experiencia.',
+        habilidades: 'Habilidades',
+        contactText: 'No dudes en contactarme',
+        skillTexts: [
+            'Instalaciones eléctricas',
+            'Instalación de filtros de agua',
+            'Instalaciones de aire acondicionado',
+            'Instalación y eliminación de radiadores de agua',
+            'Instalación y eliminación de fregaderos y desagües'
+        ]
+    };
 
-h1, h2 {
-  margin: 0.5em 0;
-}
+    const englishText = {
+        description: 'Handyman based in Barcelona, with more than 10 years of experience.',
+        habilidades: 'Skills',
+        contactText: "Don't hesitate to contact",
+        skillTexts: [
+            'Electrical installations',
+            'Water filter installations',
+            'Air conditioner installations',
+            'Water radiator installation and removal',
+            'Sink and drains installation and removal'
+        ]
+    };
 
-#profile-picture {
-  max-width: 150px;
-  border-radius: 50%;
-}
+    const updateLanguage = (lang) => {
+        const description = document.getElementById('description');
+        const skillsHeader = document.querySelector('.skills h2');
+        const contactText = document.querySelector('.contact p');
+        const skillElements = document.querySelectorAll('.skill p');
 
-#about, #skills, #contact {
-  margin: 20px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-}
+        if (lang === 'es') {
+            description.textContent = spanishText.description;
+            skillsHeader.textContent = spanishText.habilidades;
+            contactText.textContent = spanishText.contactText;
+            skillElements.forEach((skill, index) => {
+                skill.textContent = spanishText.skillTexts[index];
+            });
+        } else {
+            description.textContent = englishText.description;
+            skillsHeader.textContent = englishText.habilidades;
+            contactText.textContent = englishText.contactText;
+            skillElements.forEach((skill, index) => {
+                skill.textContent = englishText.skillTexts[index];
+            });
+        }
+    };
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+    document.getElementById('spanish-btn').addEventListener('click', () => updateLanguage('es'));
+    document.getElementById('english-btn').addEventListener('click', () => updateLanguage('en'));
 
-li {
-  margin: 5px 0;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3;
-}
+    // Set initial language to Spanish
+    updateLanguage('es');
+});
