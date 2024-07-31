@@ -1,55 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
 header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
 header h1 {
     margin: 0;
 }
 
-.language-switch button {
+.language-buttons button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.language-switch img {
+.language-buttons img {
     width: 30px;
+    height: auto;
 }
 
 .profile {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px;
 }
 
-.profile img {
+.profile-img {
     border-radius: 50%;
     width: 150px;
+    height: 150px;
 }
 
 .skills {
     padding: 20px;
 }
 
-.skill {
-    margin-bottom: 20px;
+.skills h2 {
+    text-align: center;
 }
 
-.skill p {
-    cursor: pointer;
+.skill {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.skill-title {
     margin: 0;
-    font-weight: bold;
+    cursor: pointer;
+    color: #007BFF;
 }
 
 .skill-images {
@@ -59,17 +69,19 @@ header h1 {
 
 .skill-images img {
     width: 100px;
-    margin-right: 5px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .contact {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 #contact-button {
-    background: none;
+    font-size: 24px;
     border: none;
-    font-size: 30px;
+    background: none;
     cursor: pointer;
+    color: #007BFF;
 }
