@@ -3,67 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marc Planas, handyman in Barcelona with more than 10 years of experience. Contact for free consultation and budget.">
-    <meta name="keywords" content="Marc Planas, manitas, handyman, Barcelona">
-    <title>Marc Planas - Manitas en Barcelona</title>
+    <title>Marc Planas</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Marc Planas</h1>
-        <div class="language-buttons">
-            <button id="es-btn"><img src="spanish-flag.png" alt="Español"></button>
-            <button id="en-btn"><img src="british-flag.png" alt="English"></button>
+        <div class="language-switcher">
+            <button onclick="setLanguage('es')" class="lang-btn">🇪🇸</button>
+            <button onclick="setLanguage('en')" class="lang-btn">🇬🇧</button>
         </div>
     </header>
+    <section class="about">
+        <img src="me.png" alt="Marc Planas">
+        <p class="description" data-es="Soy un manitas en Barcelona, con más de 10 años de experiencia." data-en="Handyman based in Barcelona, with more than 10 years of experience.">
+            Soy un manitas en Barcelona, con más de 10 años de experiencia.
+        </p>
+    </section>
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="skill" onclick="toggleSkill('skill1')">
+            <h3 data-es="Instalaciones eléctricas" data-en="Electrical Installations">Instalaciones eléctricas</h3>
+            <div id="skill1" class="skill-images">
+                <img src="skill11.png" alt="Skill 1 Image 1">
+                <img src="skill12.png" alt="Skill 1 Image 2">
+                <img src="skill13.png" alt="Skill 1 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill2')">
+            <h3 data-es="Instalaciones de filtros de agua" data-en="Water Filters Installations">Instalaciones de filtros de agua</h3>
+            <div id="skill2" class="skill-images">
+                <img src="skill21.png" alt="Skill 2 Image 1">
+                <img src="skill22.png" alt="Skill 2 Image 2">
+                <img src="skill23.png" alt="Skill 2 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill3')">
+            <h3 data-es="Instalación de aire acondicionado" data-en="Air Conditioner Installations">Instalación de aire acondicionado</h3>
+            <div id="skill3" class="skill-images">
+                <img src="skill31.png" alt="Skill 3 Image 1">
+                <img src="skill32.png" alt="Skill 3 Image 2">
+                <img src="skill33.png" alt="Skill 3 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill4')">
+            <h3 data-es="Instalación de radiadores de agua" data-en="Water Radiator Installations">Instalación de radiadores de agua</h3>
+            <div id="skill4" class="skill-images">
+                <img src="skill41.png" alt="Skill 4 Image 1">
+                <img src="skill42.png" alt="Skill 4 Image 2">
+                <img src="skill43.png" alt="Skill 4 Image 3">
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <p data-es="No dudes en contactar" data-en="Don't hesitate to contact">No dudes en contactar</p>
+        <button class="contact-btn" onclick="sendEmail()">✉️</button>
+    </section>
 
-    <main>
-        <section class="profile">
-            <img src="me.png" alt="Marc Planas" class="profile-img">
-            <p id="description">¡Manitas en Barcelona con más de 10 años de experiencia! Capaz de todo tipo de trabajos. Contáctame para una consulta y presupuesto gratuitos.</p>
-        </section>
+    <script src="scripts.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Planas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Marc Planas</h1>
+        <div class="language-switcher">
+            <button onclick="setLanguage('es')" class="lang-btn">🇪🇸</button>
+            <button onclick="setLanguage('en')" class="lang-btn">🇬🇧</button>
+        </div>
+    </header>
+    <section class="about">
+        <img src="me.png" alt="Marc Planas">
+        <p class="description" data-es="Soy un manitas en Barcelona, con más de 10 años de experiencia." data-en="Handyman based in Barcelona, with more than 10 years of experience.">
+            Soy un manitas en Barcelona, con más de 10 años de experiencia.
+        </p>
+    </section>
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="skill" onclick="toggleSkill('skill1')">
+            <h3 data-es="Instalaciones eléctricas" data-en="Electrical Installations">Instalaciones eléctricas</h3>
+            <div id="skill1" class="skill-images">
+                <img src="skill11.png" alt="Skill 1 Image 1">
+                <img src="skill12.png" alt="Skill 1 Image 2">
+                <img src="skill13.png" alt="Skill 1 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill2')">
+            <h3 data-es="Instalaciones de filtros de agua" data-en="Water Filters Installations">Instalaciones de filtros de agua</h3>
+            <div id="skill2" class="skill-images">
+                <img src="skill21.png" alt="Skill 2 Image 1">
+                <img src="skill22.png" alt="Skill 2 Image 2">
+                <img src="skill23.png" alt="Skill 2 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill3')">
+            <h3 data-es="Instalación de aire acondicionado" data-en="Air Conditioner Installations">Instalación de aire acondicionado</h3>
+            <div id="skill3" class="skill-images">
+                <img src="skill31.png" alt="Skill 3 Image 1">
+                <img src="skill32.png" alt="Skill 3 Image 2">
+                <img src="skill33.png" alt="Skill 3 Image 3">
+            </div>
+        </div>
+        <div class="skill" onclick="toggleSkill('skill4')">
+            <h3 data-es="Instalación de radiadores de agua" data-en="Water Radiator Installations">Instalación de radiadores de agua</h3>
+            <div id="skill4" class="skill-images">
+                <img src="skill41.png" alt="Skill 4 Image 1">
+                <img src="skill42.png" alt="Skill 4 Image 2">
+                <img src="skill43.png" alt="Skill 4 Image 3">
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <p data-es="No dudes en contactar" data-en="Don't hesitate to contact">No dudes en contactar</p>
+        <button class="contact-btn" onclick="sendEmail()">✉️</button>
+    </section>
 
-        <section class="skills">
-            <h2>Habilidades</h2>
-            <div class="skill">
-                <h3 class="skill-title">Instalaciones Eléctricas</h3>
-                <div class="skill-images" id="skill1-images">
-                    <img src="skill11.png" alt="Instalaciones Eléctricas 1">
-                    <img src="skill12.png" alt="Instalaciones Eléctricas 2">
-                    <img src="skill13.png" alt="Instalaciones Eléctricas 3">
-                </div>
-            </div>
-            <div class="skill">
-                <h3 class="skill-title">Instalaciones de Filtros de Agua</h3>
-                <div class="skill-images" id="skill2-images">
-                    <img src="skill21.png" alt="Instalaciones de Filtros de Agua 1">
-                    <img src="skill22.png" alt="Instalaciones de Filtros de Agua 2">
-                    <img src="skill23.png" alt="Instalaciones de Filtros de Agua 3">
-                </div>
-            </div>
-            <div class="skill">
-                <h3 class="skill-title">Instalaciones de Aire Acondicionado</h3>
-                <div class="skill-images" id="skill3-images">
-                    <img src="skill31.png" alt="Instalaciones de Aire Acondicionado 1">
-                    <img src="skill32.png" alt="Instalaciones de Aire Acondicionado 2">
-                    <img src="skill33.png" alt="Instalaciones de Aire Acondicionado 3">
-                </div>
-            </div>
-            <div class="skill">
-                <h3 class="skill-title">Instalaciones de Radiadores de Agua</h3>
-                <div class="skill-images" id="skill4-images">
-                    <img src="skill41.png" alt="Instalaciones de Radiadores de Agua 1">
-                    <img src="skill42.png" alt="Instalaciones de Radiadores de Agua 2">
-                    <img src="skill43.png" alt="Instalaciones de Radiadores de Agua 3">
-                </div>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>¡No dudes en contactarme!</h2>
-            <button id="contact-button">✉️</button>
-        </section>
-    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
