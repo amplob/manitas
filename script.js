@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('contact').querySelector('p').innerText = '¡No dudes en contactarme!';
         } else if (lang === 'en') {
             document.querySelector('title').innerText = 'Marc Is My Handyman';
-            document.getElementById('description').innerHTML = 'Handyman based in Barcelona! With more than 10 years of experience, capable of all kinds of work. <strong>Contact me for a FREE consultation and quote.</strong>';
+            document.getElementById('description').innerHTML = 'Handyman based in Barcelona! With more than 10 years of experience, capable of all kinds of work. <strong>Contact me for a FREE consultation and budget.</strong>';
             document.getElementById('contact').querySelector('p').innerText = 'Don\'t hesitate to contact me!';
         }
         // Update skills section
