@@ -3,68 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marc Planas, manitas en Barcelona con más de 10 años de experiencia.">
+    <meta name="description" content="Marc Es Mi Manitas, a handyman based in Barcelona with over 10 years of experience.">
     <meta name="keywords" content="Marc Planas, manitas, handyman, Barcelona">
-    <meta name="author" content="Marc Planas">
-    <title>Marc Planas</title>
+    <title>Marc Es Mi Manitas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="lang-buttons">
-            <button id="spanish" onclick="setLanguage('es')">🇪🇸</button>
-            <button id="english" onclick="setLanguage('en')">🇬🇧</button>
+        <div class="header-content">
+            <img src="me.png" alt="Marc's Photo" class="profile-pic">
+            <h1>Marc Es Mi Manitas</h1>
+            <div class="language-switcher">
+                <button id="es-btn" class="flag es"></button>
+                <button id="en-btn" class="flag en"></button>
+            </div>
         </div>
-        <h1 id="site-name">Marc Planas</h1>
     </header>
 
     <main>
-        <section id="about-me">
-            <img src="me.png" alt="Marc Planas" class="profile-img">
-            <p id="description">Handyman based in Barcelona! With more than 10 years of experience, capable of all kinds of work. Contact me for a free consultation and budget.</p>
+        <section id="description">
+            <p>¡Manitas en Barcelona! Con más de 10 años de experiencia, capaz de todo tipo de trabajos. <strong>Contáctame para una consulta y presupuesto GRATIS.</strong></p>
         </section>
 
         <section id="skills">
-            <div class="skill">
-                <h2 id="skill1-title" onclick="toggleSkill('skill1')">Electrical installations</h2>
-                <div id="skill1-pics" class="skill-pics">
-                    <img src="skill11.png" alt="Electrical installation" class="skill-img">
-                    <img src="skill12.png" alt="Electrical installation" class="skill-img">
-                    <img src="skill13.png" alt="Electrical installation" class="skill-img">
+            <h2>Habilidades</h2>
+            <div class="skill" id="skill1">
+                <h3>Instalaciones eléctricas</h3>
+                <div class="images hidden">
+                    <img src="skill11.png" alt="Instalación eléctrica 1">
+                    <img src="skill12.png" alt="Instalación eléctrica 2">
+                    <img src="skill13.png" alt="Instalación eléctrica 3">
                 </div>
             </div>
-
-            <div class="skill">
-                <h2 id="skill2-title" onclick="toggleSkill('skill2')">Water filters installations</h2>
-                <div id="skill2-pics" class="skill-pics">
-                    <img src="skill21.png" alt="Water filter installation" class="skill-img">
-                    <img src="skill22.png" alt="Water filter installation" class="skill-img">
-                    <img src="skill23.png" alt="Water filter installation" class="skill-img">
+            <div class="skill" id="skill2">
+                <h3>Instalación de filtros de agua</h3>
+                <div class="images hidden">
+                    <img src="skill21.png" alt="Filtro de agua 1">
+                    <img src="skill22.png" alt="Filtro de agua 2">
+                    <img src="skill23.png" alt="Filtro de agua 3">
                 </div>
             </div>
-
-            <div class="skill">
-                <h2 id="skill3-title" onclick="toggleSkill('skill3')">Air conditioner installations</h2>
-                <div id="skill3-pics" class="skill-pics">
-                    <img src="skill31.png" alt="Air conditioner installation" class="skill-img">
-                    <img src="skill32.png" alt="Air conditioner installation" class="skill-img">
-                    <img src="skill33.png" alt="Air conditioner installation" class="skill-img">
+            <div class="skill" id="skill3">
+                <h3>Instalación de aires acondicionados</h3>
+                <div class="images hidden">
+                    <img src="skill31.png" alt="Aire acondicionado 1">
+                    <img src="skill32.png" alt="Aire acondicionado 2">
+                    <img src="skill33.png" alt="Aire acondicionado 3">
                 </div>
             </div>
-
-            <div class="skill">
-                <h2 id="skill4-title" onclick="toggleSkill('skill4')">Water radiator installation</h2>
-                <div id="skill4-pics" class="skill-pics">
-                    <img src="skill41.png" alt="Water radiator installation" class="skill-img">
-                    <img src="skill42.png" alt="Water radiator installation" class="skill-img">
-                    <img src="skill43.png" alt="Water radiator installation" class="skill-img">
+            <div class="skill" id="skill4">
+                <h3>Instalación de radiadores de agua</h3>
+                <div class="images hidden">
+                    <img src="skill41.png" alt="Radiador de agua 1">
+                    <img src="skill42.png" alt="Radiador de agua 2">
+                    <img src="skill43.png" alt="Radiador de agua 3">
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <p>Don't hesitate to contact me!</p>
-            <a id="email-button" href="mailto:marcisyourhandyman@gmail.com?subject=Question%20" onclick="updateEmailSubject()">✉️</a>
+            <p>¡No dudes en contactarme!</p>
+            <button id="contact-btn" class="contact-icon">✉️</button>
         </section>
     </main>
 
