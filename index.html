@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marc Planas</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Planas - Handyman</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="language-buttons">
-      <button id="english" onclick="translate('en')">🇬🇧</button>
-      <button id="spanish" onclick="translate('es')">🇪🇸</button>
-    </div>
-    <h1 id="name">Marc Planas</h1>
-  </header>
-
-  <main>
-    <section id="about">
-      <img src="me.png" alt="Marc Planas" id="profile-picture">
-      <p id="description">Handyman based in Barcelona, with more than 10 years of experience.</p>
+    <header>
+        <h1>Marc Planas</h1>
+        <div class="language-buttons">
+            <button id="spanish-btn"><img src="spanish-flag.png" alt="Spanish"></button>
+            <button id="english-btn"><img src="british-flag.png" alt="English"></button>
+        </div>
+    </header>
+    <section class="about">
+        <img src="me.png" alt="Marc Planas" id="profile-pic">
+        <p id="description">Handyman based in Barcelona, with more than 10 years of experience.</p>
     </section>
-
-    <section id="skills">
-      <h2 id="skills-title">Skills</h2>
-      <ul id="skills-list">
-        <li>Electrical installations</li>
-        <li>Water filters installations</li>
-        <li>Air conditioner installations</li>
-        <li>Water radiator installation and removal</li>
-        <li>Sink and drains installation and removal</li>
-      </ul>
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="skill" id="skill1">
+            <p>Instalaciones eléctricas</p>
+            <div class="skill-images">
+                <img src="skill11.png" alt="Electrical 1">
+                <img src="skill12.png" alt="Electrical 2">
+                <img src="skill13.png" alt="Electrical 3">
+            </div>
+        </div>
+        <div class="skill" id="skill2">
+            <p>Instalación de filtros de agua</p>
+            <div class="skill-images">
+                <img src="skill21.png" alt="Water Filter 1">
+                <img src="skill22.png" alt="Water Filter 2">
+                <img src="skill23.png" alt="Water Filter 3">
+            </div>
+        </div>
+        <div class="skill" id="skill3">
+            <p>Instalaciones de aire acondicionado</p>
+            <div class="skill-images">
+                <img src="skill31.png" alt="Air Conditioner 1">
+                <img src="skill32.png" alt="Air Conditioner 2">
+                <img src="skill33.png" alt="Air Conditioner 3">
+            </div>
+        </div>
+        <div class="skill" id="skill4">
+            <p>Instalación y eliminación de radiadores de agua</p>
+            <div class="skill-images">
+                <img src="skill41.png" alt="Water Radiator 1">
+                <img src="skill42.png" alt="Water Radiator 2">
+                <img src="skill43.png" alt="Water Radiator 3">
+            </div>
+        </div>
+        <div class="skill" id="skill5">
+            <p>Instalación y eliminación de fregaderos y desagües</p>
+            <div class="skill-images">
+                <img src="skill51.png" alt="Sink 1">
+                <img src="skill52.png" alt="Sink 2">
+                <img src="skill53.png" alt="Sink 3">
+            </div>
+        </div>
     </section>
-
-    <section id="contact">
-      <h2 id="contact-title">Contact</h2>
-      <p id="contact-text">Don't hesitate to contact:</p>
-      <form action="mailto:marcisyourhandyman@gmail.com" method="post" enctype="text/plain">
-        <textarea id="contact-input">Hello,
-My name is ... 
-And I want to ask ... 
-Thank you</textarea>
-        <button type="submit">Send</button>
-      </form>
+    <section class="contact">
+        <p>No dudes en contactarme</p>
+        <button id="contact-btn"><img src="paper-plane.png" alt="Contact"></button>
     </section>
-  </main>
+    <script src="script.js"></script>
 </body>
 </html>
