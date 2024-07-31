@@ -2,56 +2,59 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
-.language-switcher {
-    display: flex;
+header h1 {
+    margin: 0;
 }
 
-.lang-btn {
-    margin-left: 10px;
-    font-size: 24px;
-    border: none;
+.language-switch button {
     background: none;
+    border: none;
     cursor: pointer;
 }
 
-.about {
-    display: flex;
-    align-items: center;
+.language-switch img {
+    width: 30px;
+}
+
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.skills {
+    padding: 20px;
+}
+
+.skill {
     margin-bottom: 20px;
 }
 
-.about img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.skills .skill {
-    margin-bottom: 10px;
-}
-
-.skill h3 {
+.skill p {
     cursor: pointer;
     margin: 0;
-    padding: 5px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
+    font-weight: bold;
 }
 
 .skill-images {
     display: none;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .skill-images img {
@@ -60,16 +63,13 @@ header {
 }
 
 .contact {
-    margin-top: 20px;
+    text-align: center;
+    margin: 20px 0;
 }
 
-.contact-btn {
-    font-size: 24px;
+#contact-button {
     background: none;
     border: none;
+    font-size: 30px;
     cursor: pointer;
-}
-
-.hidden {
-    display: none;
 }
