@@ -1,50 +1,89 @@
-function translate(lang) {
-  const texts = {
-    en: {
-      name: "Marc Planas",
-      description: "Handyman based in Barcelona, with more than 10 years of experience.",
-      skillsTitle: "Skills",
-      skills: [
-        "Electrical installations",
-        "Water filters installations",
-        "Air conditioner installations",
-        "Water radiator installation and removal",
-        "Sink and drains installation and removal"
-      ],
-      contactTitle: "Contact",
-      contactText: "Don't hesitate to contact:",
-      contactPlaceholder: "Hello,\nMy name is ... \nAnd I want to ask ... \nThank you"
-    },
-    es: {
-      name: "Marc Planas",
-      description: "Manitas en Barcelona, con más de 10 años de experiencia.",
-      skillsTitle: "Habilidades",
-      skills: [
-        "Instalaciones eléctricas",
-        "Instalaciones de filtros de agua",
-        "Instalaciones de aire acondicionado",
-        "Instalación y remoción de radiadores de agua",
-        "Instalación y remoción de fregaderos y desagües"
-      ],
-      contactTitle: "Contacto",
-      contactText: "No dude en contactar:",
-      contactPlaceholder: "Hola,\nMi nombre es ... \nY quiero preguntar ... \nGracias"
-    }
-  };
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
 
-  document.getElementById('name').textContent = texts[lang].name;
-  document.getElementById('description').textContent = texts[lang].description;
-  document.getElementById('skills-title').textContent = texts[lang].skillsTitle;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 
-  const skillsList = document.getElementById('skills-list');
-  skillsList.innerHTML = '';
-  texts[lang].skills.forEach(skill => {
-    const li = document.createElement('li');
-    li.textContent = skill;
-    skillsList.appendChild(li);
-  });
+.language-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
 
-  document.getElementById('contact-title').textContent = texts[lang].contactTitle;
-  document.getElementById('contact-text').textContent = texts[lang].contactText;
-  document.getElementById('contact-input').value = texts[lang].contactPlaceholder;
+.language-buttons img {
+    width: 30px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+.about {
+    padding: 20px;
+}
+
+#profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.skills {
+    padding: 20px;
+    background-color: white;
+    margin: 10px 0;
+}
+
+.skills h2 {
+    margin-top: 0;
+}
+
+.skill {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.skill p {
+    margin: 5px 0;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.skill-images {
+    display: none;
+}
+
+.skill-images img {
+    width: 100px;
+    margin: 5px;
+}
+
+.contact {
+    padding: 20px;
+}
+
+#contact-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#contact-btn img {
+    width: 30px;
+    height: auto;
 }
