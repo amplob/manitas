@@ -1,3 +1,13 @@
+#text-board {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 a img {
     display: block;
     width: 50px; /* Adjust as needed */
