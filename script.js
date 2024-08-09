@@ -44,4 +44,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-btn').addEventListener('click', () => {
         window.location.href = `mailto:marcisyourhandyman@gmail.com?subject=Question ${emailCounter++}`;
     });
+
+    ///////Text Board Behaviour////////
+    
+    // Get the text board element
+const textBoard = document.getElementById('text-board');
+
+// Load the saved text from local storage
+function loadText() {
+    const savedText = localStorage.getItem('textContent');
+    if (savedText) {
+        textBoard.innerHTML = savedText;
+    }
+}
+
+// Save the current text content to local storage
+function saveText() {
+    const textContent = textBoard.innerHTML;
+    localStorage.setItem('textContent', textContent);
+}
+
+// Save text content on input
+textBoard.addEventListener('input', saveText);
+
+// Load the saved text when the page loads
+window.addEventListener('load', loadText);
 });
