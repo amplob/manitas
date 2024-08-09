@@ -7,7 +7,8 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 
 
 let emailCounter = 1000;
-let saveTimeout; 
+let saveTimeout;
+const saveInterval = 1000; // Time in milliseconds to wait before saving
 
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle skill images
