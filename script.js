@@ -1,4 +1,13 @@
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://uebruygyrwmsqtmskcdz.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+
 let emailCounter = 1000;
+let saveTimeout; 
 
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle skill images
@@ -46,27 +55,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     ///////Text Board Behaviour////////
-    
-    // Get the text board element
-const textBoard = document.getElementById('text-board');
 
-// Load the saved text from local storage
-function loadText() {
-    const savedText = localStorage.getItem('textContent');
-    if (savedText) {
-        textBoard.innerHTML = savedText;
+
+    //load the textboard
+async function loadContent() {
+  const { data, error } = await supabase
+    .from('text_board')
+    .select('content')
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .single();
+
+  if (error) {
+    console.error('Error loading content:', error);
+  } else {
+    document.getElementById('text-board').innerHTML = data.content || 'Click here and start typing...';
+  }
+}
+
+// Call loadContent function when the page loads
+window.addEventListener('load', loadContent);
+
+
+   
+// Function to save the content to Supabase
+async function saveContent() {
+    const textBoardContent = document.getElementById('text-board').innerHTML;
+    const { data, error } = await supabase
+        .from('text_board')
+        .upsert([
+            { content: textBoardContent, id: 1 }  // Assuming id is 1 for the content
+        ]);
+
+    if (error) {
+        console.error('Error saving content:', error);
+    } else {
+        console.log('Content saved:', data);
     }
 }
 
-// Save the current text content to local storage
-function saveText() {
-    const textContent = textBoard.innerHTML;
-    localStorage.setItem('textContent', textContent);
+// Debounced function to handle auto-saving
+function debounceSaveContent() {
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(saveContent, 1000); // Save after 1 second of inactivity
 }
 
-// Save text content on input
-textBoard.addEventListener('input', saveText);
+// Add event listener to auto-save on content change
+document.getElementById('text-board').addEventListener('input', debounceSaveContent);
 
-// Load the saved text when the page loads
-window.addEventListener('load', loadText);
-});
+
