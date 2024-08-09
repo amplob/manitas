@@ -1,3 +1,14 @@
+a img {
+    display: block;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    transition: opacity 0.3s;
+}
+
+a img:hover {
+    opacity: 0.8;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
