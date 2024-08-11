@@ -4,7 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://uebruygyrwmsqtmskcdz.supabase.co'
 //const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 const supabaseKey ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVlYnJ1eWd5cndtc3F0bXNrY2R6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjMxNzM2MzYsImV4cCI6MjAzODc0OTYzNn0.kCWtxwaAu7hMbHAy2Q5Dc2-RMWmhrk27a1__32I0y58'
-const supabase = createClient(supabaseUrl, supabaseKey)
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 
 let emailCounter = 1000;
